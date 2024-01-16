@@ -1,0 +1,21 @@
+
+<div>
+    <form [formGroup]="estadoForm">
+  <div>
+    <input type="text" name="nombre"formControlName="nombre"  id="">
+    <button type="button"style="background-color: green; margin: 10px;color:white" (keyup.enter)="agregar()" (click)="agregar()"> {{nombreBoton}}</button>
+  </div>
+  <div>
+    <ul>
+      <li *ngFor="let a of estados">
+          <span> {{a.nombreEstado}}</span>
+          <button style="background-color: orange; margin: 10px;" (click)="modificarRegistro(a)"> Modificar</button>
+          <button style="background-color: red;margin: 10px;" (click)="eliminar(a)"> Eliminar</button>
+  
+       </li>
+      
+    </ul>
+  </div>
+    </form>
+  </div>
+  
